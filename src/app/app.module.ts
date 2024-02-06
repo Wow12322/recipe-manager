@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 // Import components for routing
-import { AppComponent } from './app.component'; // Import AppComponent here
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
@@ -29,7 +28,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     // Declare your components here
-    AppComponent, // Add AppComponent here
     RecipeListComponent,
     RecipeDetailsComponent,
     RecipeEditComponent,
@@ -45,6 +43,6 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [],
-  bootstrap: [AppComponent] // Add AppComponent to bootstrap array
+  bootstrap: []
 })
 export class AppModule { }
