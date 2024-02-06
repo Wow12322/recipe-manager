@@ -1,0 +1,33 @@
+<div class="recipe-edit">
+  <h2>Edit Recipe</h2>
+  <form (submit)="save()">
+    <div>
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="recipe.title" name="title" required>
+    </div>
+    <div>
+      <label>Cuisine:</label>
+      <select [(ngModel)]="recipe.cuisine" name="cuisine" required>
+        <option *ngFor="let cuisine of cuisines" [value]="cuisine">{{ cuisine }}</option>
+      </select>
+    </div>
+    <div>
+      <label>Description:</label>
+      <textarea [(ngModel)]="recipe.description" name="description"></textarea>
+    </div>
+    <div>
+      <label>Instructions:</label>
+      <textarea [(ngModel)]="recipe.instructions" name="instructions" required></textarea>
+    </div>
+    <div>
+      <label>Time:</label>
+      <input type="number" [(ngModel)]="recipe.time" name="time" required>
+    </div>
+    <div>
+      <label>Servings:</label>
+      <input type="number" [(ngModel)]="recipe.servings" name="servings">
+    </div>
+    <button type="submit">Save</button>
+    <button (click)="goBack()">Cancel</button>
+  </form>
+</div>
